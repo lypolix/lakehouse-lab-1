@@ -1,0 +1,8 @@
+layer,table,rows,files,bytes,mb
+bronze,raw_customer,150000,1,8216442,7.84
+bronze,raw_orders,1500000,7,37424059,35.69
+bronze,raw_lineitem,6001215,2,151946437,144.91
+silver,dim_customer,150000,3,3111397,2.97
+silver,large_orders,57,1,790,0.00
+silver,fact_order,57,7,7335,0.01
+gold,large_volume_customer,57,1,2369,0.00
