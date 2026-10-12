@@ -1,0 +1,3 @@
+results/*.err
+results/up.log
+.DS_Store
