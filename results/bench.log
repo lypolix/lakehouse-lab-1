@@ -1,0 +1,41 @@
+=== PARQUET / NONE -> bronze.lakehouse.bench_parquet_none
+   rows=6001215 write=69991ms size=358.8MB files=2 agg1=768ms agg2=741ms
+=== PARQUET / SNAPPY -> bronze.lakehouse.bench_parquet_snappy
+   rows=6001215 write=34704ms size=196.0MB files=2 agg1=782ms agg2=724ms
+=== PARQUET / GZIP -> bronze.lakehouse.bench_parquet_gzip
+   rows=6001215 write=41373ms size=141.4MB files=2 agg1=1347ms agg2=1229ms
+=== PARQUET / ZSTD -> bronze.lakehouse.bench_parquet_zstd
+   rows=6001215 write=59206ms size=144.9MB files=2 agg1=532ms agg2=646ms
+=== PARQUET / LZ4 -> bronze.lakehouse.bench_parquet_lz4
+   ! запись упала: Oct 12, 2026 12:53:24 PM org.jline.utils.Log logr
+WARNING: Unable to create a system terminal, creating a dumb terminal (enable debug logging for more information)
+SET SESSION
+Query 20261012_125324_00
+=== ORC / NONE -> bronze.lakehouse.bench_orc_none
+   rows=6001215 write=33033ms size=431.6MB files=2 agg1=604ms agg2=942ms
+=== ORC / SNAPPY -> bronze.lakehouse.bench_orc_snappy
+   rows=6001215 write=47324ms size=211.2MB files=2 agg1=394ms agg2=949ms
+=== ORC / GZIP -> bronze.lakehouse.bench_orc_gzip
+   rows=6001215 write=27034ms size=148.6MB files=2 agg1=460ms agg2=541ms
+=== ORC / ZSTD -> bronze.lakehouse.bench_orc_zstd
+   rows=6001215 write=24519ms size=153.7MB files=2 agg1=395ms agg2=550ms
+=== ORC / LZ4 -> bronze.lakehouse.bench_orc_lz4
+   rows=6001215 write=26488ms size=230.6MB files=2 agg1=474ms agg2=612ms
+=== AVRO / SNAPPY -> bronze.lakehouse.bench_avro_snappy
+   rows=6001215 write=30470ms size=325.8MB files=2 agg1=2845ms agg2=3539ms
+=== AVRO / ZSTD -> bronze.lakehouse.bench_avro_zstd
+   rows=6001215 write=35302ms size=285.9MB files=2 agg1=3503ms agg2=3609ms
+
+format   codec   rows          write_ms  files  bytes      mb     agg1_ms  agg2_ms  status
+PARQUET  NONE    6001215       69991     2      376197625  358.8  768      741      OK
+PARQUET  SNAPPY  6001215       34704     2      205522209  196.0  782      724      OK
+PARQUET  GZIP    6001215       41373     2      148251412  141.4  1347     1229     OK
+PARQUET  ZSTD    6001215       59206     2      151957513  144.9  532      646      OK
+PARQUET  LZ4     WRITE_FAILED
+ORC      NONE    6001215       33033     2      452614061  431.6  604      942      OK
+ORC      SNAPPY  6001215       47324     2      221439024  211.2  394      949      OK
+ORC      GZIP    6001215       27034     2      155818522  148.6  460      541      OK
+ORC      ZSTD    6001215       24519     2      161151893  153.7  395      550      OK
+ORC      LZ4     6001215       26488     2      241755648  230.6  474      612      OK
+AVRO     SNAPPY  6001215       30470     2      341658440  325.8  2845     3539     OK
+AVRO     ZSTD    6001215       35302     2      299796435  285.9  3503     3609     OK
