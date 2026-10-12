@@ -1,0 +1,3 @@
+CREATE SCHEMA IF NOT EXISTS bronze.lakehouse;
+CREATE SCHEMA IF NOT EXISTS silver.lakehouse;
+CREATE SCHEMA IF NOT EXISTS gold.lakehouse;
